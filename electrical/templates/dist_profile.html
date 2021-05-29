@@ -1,0 +1,67 @@
+{% extends 'base2.html'%}
+{% block title %} Distributors Profile {% endblock %}
+
+{% block body %}
+  <br>
+	<div class="container">
+		<div class="row">
+		<div class=" col-md-11 toppad">
+          <div class="panel panel-info">
+            <div class="panel-heading">
+              <h1 class="panel-title text-info "><strong>{{user.distributors.dname}}</strong></h1>
+                          </div>
+              
+                          <div class="panel-body">
+                            <div class="row">
+                              
+                              <div class=" col-md-7 col-lg-5 ">
+                                <table class="table">
+                                  	<tr class="danger">
+                                      <td> Distributors UserName:</td>
+                                      <td>{{user.username}}</td>
+                                    </tr>
+                                    <tr>
+                                      <td>Name:</td>
+                                      <td>{{user.distributors.dname}}</td>
+                                    </tr>
+                                    
+                                    <tr>
+                                      <td>info:</td>
+                                      <td>{{user.distributors.info}}</td>
+                                    </tr>
+                                    <tr>
+                                      <td>Location:</td>
+                                      <td>{{user.distributors.location}}</td>
+                                    </tr>
+                                     <tr>
+                                      <td>Status:</td>
+                                      <td>{{user.distributors.status}}</td>
+                                    </tr>
+                                     <tr>
+                                      <td>Approved:</td>
+                                      <td>{{user.distributors.approved}}</td>
+                                    </tr>
+                                    <tr>
+                                      <td>Email:</td>
+                                      <td><a hr ef="#">{{user.email}}</a></td>
+                                    </tr>
+                                </table>
+                                   <div class="container">
+                                <div class="row">
+                                  <div class="col">
+                                  <a class="btn btn-success btn-lg" href="{% url 'rupdate' user.id %}">Edit</a>
+                                </div>
+                                <!--<div class="col">
+                                   <a class="btn btn-success btn-lg" href="{%url 'rcreate' %}">Complete profile</a>
+                                </div>-->
+                                </div>
+                          </div>
+                </div>
+              </div>
+            </div>
+        </div>
+        </div>
+		</div>
+	</div>
+  <br>
+{% endblock%}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Feedback Form HTML Template - reusable form</title>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" >
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+        <link rel="stylesheet" href="form.css" >
+        <style>
+
+body {
+	background-color:#D3D3D3;
+}
+html,
+body {
+	height: 100%;
+}
+.imagebg {
+	background-image: url("/static/webapp/images/feedback.jpg");
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	background-attachment: fixed;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	-webkit-filter: blur(3px);
+  filter: blur(0px);
+<!--  opacity: 0.6;-->
+  filter: alpha(opacity=60);
+}
+.form-container
+{
+	background-color: #FFFFFF;
+    box-shadow: 0 16px 24px 2px rgba(0,0,0,0.14), 0 20px 30px 5px rgba(0,0,0,0.12), 0 8px 10px -5px rgba(0,0,0,0.3);
+    border-radius: 8px;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+}
+
+</style>
+</head>
+<body>
+{% block body %}{% endblock %}
+</body>
+</html>

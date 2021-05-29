@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+<head>
+   {% load static %}
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>{% block title %}Electrical Application {% endblock title %}</title>
+  <link rel="stylesheet" type="text/css" href="{% static 'webapp/css/bootstrap.min.css'%}">
+
+  <link href="/static/webapp/css/style.css" rel="stylesheet" type="text/css" media="all" />
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css' >
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lobster+Two:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+  <!--Animation-->
+  <script src="/static/webapp/js/wow.min.js"></script>
+  <link href="static/webapp/css/animate.css" rel='stylesheet' type='text-center/css' />
+
+<style type="text/css">
+  .big-banner{
+    background-image: url('/static/webapp/images/el.jpg');
+  }
+  .i-am-center{
+    margin-left:26%; max-width: 100%;
+  }
+  .borders{
+    background-color: blue;
+    border-radius: 10px;
+    padding: 20px;
+  }
+  .wrapper {
+    min-height: 100%;
+    height: 100%;
+    margin: 0 auto -155px; 
+}
+  .footer, .push {
+    height: 155px; 
+}
+</style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light  navbar-fixed-top">
+    <div class="container-fluid">
+
+        <div class="">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <h2><a class="nav-link text-primary"  href="{% url 'distributors'%}">&nbsp; <strong>Dealers</strong> </a></h2>
+                </li>
+            </ul>
+        </div>
+        <div class="">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <h2><a class="nav-link text-primary" href="{% url 'rlogin'%}"> &nbsp;<strong>Distributors</strong> </a></h2>
+                </li>
+            </ul>
+        </div>
+        <div class="">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <img  src="/static/webapp/images/shahlogo1.jpg" style="height:100px; width:150px" alt="Home" >
+                </li>
+            </ul>
+        </div>
+
+        <div class="">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <h2><a class="nav-link text-primary" href="{% url 'feedback'%}">&nbsp; <strong>FeedBack</strong> </a></h2>
+                </li>
+            </ul>
+        </div>
+
+        <div class="">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <h2><a class="nav-link text-primary" href="{% url 'about'%}"> &nbsp;<strong>About Us</strong> </a></h2>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="jumbotron big-banner" style="height: 535px; width: 100%; padding-top:100px;" >
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="col4 text-light ">
+                    <h1 style="font-style:italic; font-family:sans-serif; "><strong>For Best Offers</strong></h1>
+                    <h3><strong>Register Now<br/>and<br/>Order your</strong></h3>
+                    <h2><strong>Electrical Items</strong></h2>
+                </div>
+                <br>
+                <button type="button" class="btn btn-warning btn-lg"><strong><a href="{% url 'register'%}" class="text-light">Register</a></strong></button>
+            </div>
+            <div class="col4">
+                <div class="col4 text-light">
+                    <h1 style="font-style:italic; font-family:sans-serif; "><strong>Be a Distributors</strong></h1>
+                    <h3><strong>Join Us to<br/>Increase Your Sale</strong></h3>
+                    <h3><strong> And also <br/>Increase Your Stock</strong></h3>
+                </div>
+                <br>
+                <button type="button" class="btn btn-success btn-lg"><strong><a href="{% url 'rregister'%}" class="text-light">Join Us</a></strong></button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="content">
+    <div class="ordering-section" id="Order">
+        <div class="container">
+            <div class="ordering-section-head text-center wow bounceInRight" data-wow-delay="0.4s">
+                <h3>Ordering something is never easy</h3>
+                <div class="dotted-line">
+                    <h4>Just 4 steps to oder Items  </h4>
+                </div>
+            </div>
+            <div class="i-am-center">
+                <div class="row ">
+                    <div class="col-sm-4 col-md-2">
+                        <div class="thumbnail borders text-light">
+                            <p>Choose <span>Your City's Distributors</span></p>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 col-md-2">
+                        <div class="thumbnail borders text-light">
+                            <p>Order  <span>Your Items witch you want</span></p>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 col-md-2">
+                        <div class="thumbnail borders text-light" >
+                            <p> Barrow   <span> online </span></p>
+                            <label></label>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 col-md-2">
+                        <div class="thumbnail borders text-light">
+                            <p> Secure  <span> your other costumer  </span></p>
+                            <label></label>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container col-md-9">
+    <div class="top-restaurent-head">
+        <h3>Top Brands</h3>
+    </div>
+    <div class="row">
+        <div class="col-md-4 ">
+            <div class="thumbnail">
+                <a href="">
+                    <img src="/static/webapp/images/ans.png" class="img-responsive" height="210" alt="" />
+                </a>
+            </div>
+        </div>
+        <br>
+        <div class="col-md-4 ">
+            <div class="thumbnail">
+                <a href="">
+                    <img src="/static/webapp/images/ha-steak.png" class="img-responsive"  alt="" />
+                </a>
+            </div>
+        </div>
+        <br>
+        <div class="col-md-4 ">
+            <div class="thumbnail">
+                <a href="">
+                    <img src="/static/webapp/images/baj.png" class="img-responsive" alt="" />
+                </a>
+            </div>
+        </div>
+        <br>
+    </div>
+    <br>
+</div>
+<br>
+<br>
+<div class="container col-md-9">
+    <div class="top-cuisine-head">
+        <h3>Top items</h3>
+    </div>
+    <div class="row">
+        <div class="col-md-4 ">
+            <div class="thumbnail">
+                <a href="">
+                    <img src="/static/webapp/images/cb1.jpg" class="img-responsive" height="150" width="150" alt="" />
+                </a>
+            </div>
+            <div class="caption border col-sm-6">
+                <h6 class="text-secondary"><strong>electrical box</strong></h6>
+            </div>
+        </div>
+        <div class="col-md-4 mb-3">
+            <div class="thumbnail">
+                <a href="">
+                    <img src="/static/webapp/images/el1.jpg" class="img-responsive" height="150" width="150" alt="" />
+                </a>
+            </div>
+            <div class="caption border col-sm-4">
+                <h5 class="text-secondary"><strong>Bulbs</strong></h5>
+            </div>
+        </div>
+        <div class="col-md-4 ">
+            <div class="thumbnail">
+                <a href="">
+                    <img src="/static/webapp/images/el9.jpg" class="img-responsive" height="150" width="250" alt="" />
+                </a>
+            </div>
+            <div class="caption border col-sm-6">
+                <h5 class="text-secondary"><strong>Tube Lights</strong></h5>
+            </div>
+        </div>
+        <div class="col-md-4 mb-3">
+            <div class="thumbnail">
+                <a href="">
+                    <img src="/static/webapp/images/f1.jpg" class="img-responsive" height="150" width="150" alt="" />
+                </a>
+            </div>
+            <div class="caption border col-sm-4">
+                <h5 class="text-secondary"><strong>Simple Fnas</strong></h5>
+            </div>
+        </div>
+        <div class="col-md-4 ">
+            <div class="thumbnail">
+                <a href="">
+                    <img src="/static/webapp/images/f5.jpg" class="img-responsive" height="150" width="150" alt="" />
+                </a>
+            </div>
+            <div class="caption border col-sm-4">
+                <h5 class="text-secondary"><strong>Fancy Fans</strong></h5>
+            </div>
+        </div>
+        <div class="col-md-4 ">
+            <div class="thumbnail">
+                <a href="">
+                    <img src="/static/webapp/images/p1.jpg" class="img-responsive" height="150" width="150" alt="" />
+                </a>
+            </div>
+            <div class="caption border col-md-6">
+                <h5 class="text-secondary"><strong> Wries </strong></h5>
+            </div>
+        </div>
+        <div class="col-md-4 ">
+            <div class="thumbnail">
+                <a href="">
+                    <img src="/static/webapp/images/pp4.jpg" class="img-responsive" alt="" />
+                </a>
+            </div>
+            <div class="caption border col-md-4">
+                <h5 class="text-secondary"><strong>Power Plugs</strong></h5>
+            </div>
+        </div>
+        <div class="col-md-6 ">
+            <div class="thumbnail">
+                <img src="/static/webapp/images/p4.jpg" class="img-responsive" alt="" />
+                <div class="caption border col-md-3">
+                    <h5 class="text-secondary"><strong>Modules Wires</strong></h5>
+                </div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
+<br>
+<br>
+<br>
+<div class="footer">
+    <div class="container">
+        <div class="footer-copyright text-center py-3">© 2020 madeBy:
+            <a href="{% url 'about' %}"> utsav</a>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="{%static 'webapp/js/jquery.min.js'%}">
+</script>
+<script type="text/javascript" src="{%static 'webapp/js/bootstrap.min.js'%}"></script>
+<script>
+	new WOW().init();
+</script>
+<script src="/static/webapp/js/simpleCart.min.js"> </script>
+<script type="text/javascript" src="/static/webapp/js/move-top.js"></script>
+<script type="text/javascript" src="/static/webapp/js/easing.js"></script>
+</body>
+</html>

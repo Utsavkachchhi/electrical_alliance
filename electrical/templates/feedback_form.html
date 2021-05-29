@@ -1,0 +1,44 @@
+{% extends 'base3.html' %}
+{% block body %}
+<div class="imagebg">
+    <div class="row " style="margin-top: 50px">
+        <div class="col-md-5 col-md-offset-3 form-container">
+            <ul class="navbar-nav ">
+                <h3>
+                    <li class="nav-item ">
+                        <a class="nav-link text-success" href="{% url 'index' %}">home</a>
+                    </li>
+                </h3>
+            </ul>
+            <ul class="navbar-nav ">
+                <h3>
+                    <li class="nav-item ">
+                        <a class="nav-link text-success" href="{% url 'distributors' %}">Distributors</a>
+                    </li>
+                </h3>
+            </ul>
+            <ul class="navbar-nav ">
+                <h3>
+                    <li class="nav-item ">
+                        <a class="nav-link text-success" href="{% url 'about' %}">About Us</a>
+                    </li>
+                </h3>
+            </ul>
+                        <br>
+            <br>
+            <center>  <h1 style="color:#00000">FeedBack</h1></center>
+            <br>
+            <center>
+                <form action="{% url 'feedback' %}" method="POST">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <input type="submit" class="btn btn-success " style="center" >
+                    <br>
+                    <br>
+                </form>
+            </center>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

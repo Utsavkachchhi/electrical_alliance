@@ -1,0 +1,31 @@
+{% extends 'base2.html' %}
+{% block title %}Order List{% endblock %}
+{% block body %}
+<div class="container">
+	<br>
+    <h2 align="center">Order Information</h2>
+	<br>
+        <table class="table table-hover table-bordered">
+					<thead class="thead thead-dark">
+						<th>Order ID.</th>
+						<th>Dealers</th>
+						<th>Distributors</th>
+						<th>Total Amount</th>
+						<th>Status</th>
+						<th>Return</th>
+					</thead>
+					{% for x in order %}
+					<tr>
+						<td>{{ x.id }}</td>
+						<td>{{ x.orderedBy }}</td>
+						<td>{{x.d_id}}</td>
+						<td>{{x.total_amount}}</td>
+						<td>{{x.status}}</td>
+						<td><a href="{% url 'delete' x.id %}" class="btn btn-danger">Return</a> </td>
+					</tr>
+					{% endfor %}
+				</table>
+</div>
+{% endblock %}
+
+
